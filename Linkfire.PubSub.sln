@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkfire.PubSub.Desktop.Sub
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkfire.PubSub.Mobile.Subscriber", "Linkfire.PubSub.Mobile.Subscriber\Linkfire.PubSub.Mobile.Subscriber.csproj", "{F339F9A5-14B8-4CA2-ADFD-EF7886C40828}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E4FE5B6B-7FE9-4449-8F1F-54F5B30F64E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkfire.PubSub.MessagingServer.Test", "Linkfire.PubSub.MessagingServer.Test\Linkfire.PubSub.MessagingServer.Test.csproj", "{7D0D23F9-B174-45D2-9832-A035222FC886}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,16 @@ Global
 		{F339F9A5-14B8-4CA2-ADFD-EF7886C40828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F339F9A5-14B8-4CA2-ADFD-EF7886C40828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F339F9A5-14B8-4CA2-ADFD-EF7886C40828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D0D23F9-B174-45D2-9832-A035222FC886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0D23F9-B174-45D2-9832-A035222FC886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0D23F9-B174-45D2-9832-A035222FC886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0D23F9-B174-45D2-9832-A035222FC886}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D0D23F9-B174-45D2-9832-A035222FC886} = {E4FE5B6B-7FE9-4449-8F1F-54F5B30F64E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {513C0F82-1A50-409E-92FA-BAFEE9CE23ED}
