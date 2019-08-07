@@ -36,7 +36,7 @@ namespace Linkfire.PubSub.Mobile.Subscriber
 
         #endregion
 
-        #region Ctor
+        #region Ctors
 
         public static void InitServer()
         {
@@ -60,15 +60,18 @@ namespace Linkfire.PubSub.Mobile.Subscriber
 
                 var message = $"{Encoding.ASCII.GetString(data, 0, recv)},{publisherEndPoint.ToString()}";
 
-                AddMessage(message);
+                DisplayMessage(message);
             }
         }
 
-        public static void AddMessage(string message)
+        public static void DisplayMessage(string message)
         {
             var messageParts = message.Split(",".ToCharArray());
-            var itemNum = (Events.Count < 1) ? 0 : Events.Count;
-            Events.Add(itemNum.ToString());
+
+            for (int counter = 0; counter < messageParts.Length; counter++)
+            {
+                WriteLine(messageParts[counter]);
+            }
         }
 
         private static void SubscribeToMobileTopic()

@@ -13,9 +13,6 @@ namespace Linkfire.PubSub.Desktop.Subscriber
         {
             WriteLine("Desktop Subscriber Server Starts...");
 
-            var server = new Server();
-            var subscriber = new Subscriber();
-
             InitServer();
 
             SubscribeToDesktopTopic();
