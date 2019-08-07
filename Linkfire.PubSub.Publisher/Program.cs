@@ -1,12 +1,32 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using static System.Console;
 
 namespace Linkfire.PubSub.Publisher
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // This project should be responsible of published messages
+            var inProgress = true;
+            do
+            {
+                WriteLine("Please enter message. Q to Quite");
+                Write("> ");
+                var input = ReadLine();
+                if (input?.ToLower() != "q")
+                {
+                    // Publish any message/object user will enter
+
+                    var publisher = new Publisher();
+
+                    Task.Run(() => publisher.Publish<string>(input));
+                }
+                else
+                {
+                    inProgress = false;
+                }
+            } while (inProgress);
         }
     }
 }
